@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1030711331856",
+    "project_id": "flutter-clean-auth-2026",
+    "storage_bucket": "flutter-clean-auth-2026.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030711331856:android:26bfdec3dd9d7d87714e95",
+        "android_client_info": {
+          "package_name": "com.example.pizza_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG3z32JYuMB7uG2MomkD39pR6FBc7GAuU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
