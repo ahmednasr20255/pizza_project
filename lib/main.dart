@@ -3,8 +3,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'data/repositories/firebase_auth_repository.dart';
 import 'data/repositories/firebase_pizza_repository.dart';
+import 'data/repositories/firebase_order_repository.dart';
 import 'presentation/bloc/auth/auth_bloc.dart';
 import 'presentation/bloc/pizza/pizza_bloc.dart';
+import 'presentation/bloc/cart/cart_bloc.dart';
+import 'presentation/bloc/orders/orders_bloc.dart';
 import 'presentation/pages/login_page.dart';
 
 bool _firebaseInitialized = false;
@@ -86,6 +89,16 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => PizzaBloc(
             pizzaRepository: FirebasePizzaRepository(),
+          ),
+        ),
+        BlocProvider(
+          create: (context) => CartBloc(
+            orderRepository: FirebaseOrderRepository(),
+          ),
+        ),
+        BlocProvider(
+          create: (context) => OrdersBloc(
+            orderRepository: FirebaseOrderRepository(),
           ),
         ),
       ],
