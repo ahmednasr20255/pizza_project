@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'data/repositories/firebase_auth_repository.dart';
 import 'data/repositories/firebase_pizza_repository.dart';
@@ -20,10 +21,15 @@ void main() async {
     await Firebase.initializeApp();
     _firebaseInitialized = true;
     debugPrint('Firebase initialized successfully');
+    
+    // Test Firebase Auth instance
+    FirebaseAuth.instance;
+    debugPrint('Firebase Auth instance created successfully');
   } catch (e) {
     // Firebase not configured yet - app will run without Firebase
     _firebaseInitialized = false;
     debugPrint('Firebase initialization skipped: $e');
+    debugPrint('App will run in demo mode without Firebase');
   }
   
   runApp(const MyApp());
